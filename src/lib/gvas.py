@@ -50,6 +50,3 @@ class GvasHeader():
 
     def write(self, writer: FArchiveWriter):
         pass
-
-
-class PackageVersion():

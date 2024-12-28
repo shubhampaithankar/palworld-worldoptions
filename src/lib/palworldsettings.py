@@ -77,6 +77,8 @@ class ConfigOption:
 
 
 class SettingStructs:
+    RandomizerType = ConfigOption("RandomizerType", StructTypes.Str, "None")
+    RandomizerSeed = ConfigOption("RandomizerSeed", StructTypes.Str, "")
     DayTimeSpeedRate = ConfigOption("DayTimeSpeedRate", StructTypes.Float, 1.000000)
     NightTimeSpeedRate = ConfigOption("NightTimeSpeedRate", StructTypes.Float, 1.000000)
     ExpRate = ConfigOption("ExpRate", StructTypes.Float, 1.000000)
@@ -94,6 +96,7 @@ class SettingStructs:
     PalStaminaDecreaceRate = ConfigOption("PalStaminaDecreaceRate", StructTypes.Float, 1.000000)
     PalAutoHPRegeneRate = ConfigOption("PalAutoHPRegeneRate", StructTypes.Float, 1.000000)
     PalAutoHpRegeneRateInSleep = ConfigOption("PalAutoHpRegeneRateInSleep", StructTypes.Float, 1.000000)
+    BuildObjectHpRate = ConfigOption("BuildObjectHpRate", StructTypes.Float, 1.000000)
     BuildObjectDamageRate = ConfigOption("BuildObjectDamageRate", StructTypes.Float, 1.000000)
     BuildObjectDeteriorationDamageRate = ConfigOption("BuildObjectDeteriorationDamageRate", StructTypes.Float, 1.000000)
     CollectionDropRate = ConfigOption("CollectionDropRate", StructTypes.Float, 1.000000)
@@ -118,7 +121,11 @@ class SettingStructs:
     GuildPlayerMaxNum = ConfigOption("GuildPlayerMaxNum", StructTypes.Int, 20)
     PalEggDefaultHatchingTime = ConfigOption("PalEggDefaultHatchingTime", StructTypes.Float, 72.000000)
     WorkSpeedRate = ConfigOption("WorkSpeedRate", StructTypes.Float, 1.000000)
+    AutoSaveSpan = ConfigOption("AutoSaveSpan", StructTypes.Float, 30.000000)
     bIsMultiplay = ConfigOption("bIsMultiplay", StructTypes.Bool, False)
+    DayTimeSpeedRate = ConfigOption("DayTimeSpeedRate", StructTypes.Float, 1.000000)
+    bHardcore = ConfigOption("bHardcore", StructTypes.Bool, False)
+    bPalLost = ConfigOption("bPalLost", StructTypes.Bool, False)
     bIsPvP = ConfigOption("bIsPvP", StructTypes.Bool, False)
     bCanPickupOtherGuildDeathPenaltyDrop = ConfigOption("bCanPickupOtherGuildDeathPenaltyDrop", StructTypes.Bool, False)
     bEnableNonLoginPenalty = ConfigOption("bEnableNonLoginPenalty", StructTypes.Bool, True)
@@ -126,6 +133,9 @@ class SettingStructs:
     bIsStartLocationSelectByMap = ConfigOption("bIsStartLocationSelectByMap", StructTypes.Bool, True)
     bExistPlayerAfterLogout = ConfigOption("bExistPlayerAfterLogout", StructTypes.Bool, False)
     bEnableDefenseOtherGuildPlayer = ConfigOption("bEnableDefenseOtherGuildPlayer", StructTypes.Bool, False)
+    bInvisibleOtherGuildBaseCampAreaFX = ConfigOption("bInvisibleOtherGuildBaseCampAreaFX", StructTypes.Bool, False)
+    bBuildAreaLimit = ConfigOption("bBuildAreaLimit", StructTypes.Bool, False)
+    ItemWeightRate = ConfigOption("ItemWeightRate", StructTypes.Float, 1.000000)
     CoopPlayerMaxNum = ConfigOption("CoopPlayerMaxNum", StructTypes.Int, 4)
     ServerPlayerMaxNum = ConfigOption("ServerPlayerMaxNum", StructTypes.Int, 32)
     ServerName = ConfigOption("ServerName", StructTypes.Str, "Default Palworld Server")
@@ -142,7 +152,15 @@ class SettingStructs:
     RESTAPIEnabled = ConfigOption("RESTAPIEnabled", StructTypes.Bool, False)
     RESTAPIPort = ConfigOption("RESTAPIPort", StructTypes.Int, 8212)
     bShowPlayerList = ConfigOption("bShowPlayerList", StructTypes.Bool, False)
+    ItemWeightRate = ConfigOption("ItemWeightRate", StructTypes.Float, 1.000000)
+    ChatPostLimitPerMinute = ConfigOption("ChatPostLimitPerMinute", StructTypes.Bool, True)
+    AllowConnectPlatform = ConfigOption("AllowConnectPlatform", StructTypes.Str, "Steam")
     bIsUseBackupSaveData = ConfigOption("bIsUseBackupSaveData", StructTypes.Bool, True)
+    LogFormatType = ConfigOption("LogFormatType", StructTypes.Str, "")
+    SupplyDropSpan = ConfigOption("SupplyDropSpan", StructTypes.Int, 180)
+    EnablePredatorBossPal = ConfigOption("EnablePredatorBossPal", StructTypes.Bool, True)
+    MaxBuildingLimitNum = ConfigOption("MaxBuildingLimitNum", StructTypes.Int, 180)
+    ServerReplicatePawnCullDistance = ConfigOption("ServerReplicatePawnCullDistance", StructTypes.Float, 15000.000000)
 
     @staticmethod
     def get_config_option(option_name: str) -> ConfigOption:
